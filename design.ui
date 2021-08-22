@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1249</width>
+    <height>881</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Макет_1</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>1</number>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1221</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="setup_tab">
+     <attribute name="title">
+      <string>Старт</string>
+     </attribute>
+     <widget class="QPushButton" name="start_button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>710</y>
+        <width>411</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Выполнить расчёт</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="region_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>421</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Населённые пункты</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>401</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="region_verticalLayout">
+        <item>
+         <widget class="QComboBox" name="region_comboBox">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="currentText">
+           <string>Выберите регион</string>
+          </property>
+          <property name="maxCount">
+           <number>2147483644</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Выберите регион</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="district_comboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="currentText">
+           <string>Выберите район</string>
+          </property>
+          <property name="maxCount">
+           <number>2147483644</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Выберите район</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QComboBox" name="region_sel_comboBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>321</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="region_sel_en_checkBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>100</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>В сети</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="tasks_map_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>10</y>
+        <width>771</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>ТАБЛИЦА ЗАДАЧ</string>
+      </property>
+      <widget class="QTableWidget" name="tasks_table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>751</width>
+         <height>321</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="heli_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>411</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>Вертолёты</string>
+      </property>
+      <widget class="QComboBox" name="heli_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>20</y>
+         <width>371</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>Выберите вертолёт</string>
+       </property>
+       <property name="maxCount">
+        <number>2147483644</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Выберите вертолёт</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="heli_label_chars">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>50</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> ХАРАКТЕРИСТИКИ</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_speed_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Кр.скорость, км/ч:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_dist_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Дальн. (нагр.), км:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_mass_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Масса (пуст.), кг:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_mass_label_param">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NaN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_speed_label_param">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NaN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_dist_label_param">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NaN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_picture">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>90</y>
+         <width>261</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_dist_label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Дальн. (пуст.), км:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="heli_dist_label_param_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NaN</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QProgressBar" name="start_progressBar">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>670</y>
+        <width>421</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="tasks_groupBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>411</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Задачи</string>
+      </property>
+      <widget class="QPushButton" name="add_task_button">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>90</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Добавить</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="delete_task_button">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>90</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="task_from_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="task_to_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_from_label">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>47</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> Из:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_to_label">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>60</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>В:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_amount_label">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>120</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Задач:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_amount_num_label">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>120</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> 10</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_all_amount_label">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>150</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Всего задач:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="task_all_amount_num_label">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>150</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> 10</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="import_task_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>161</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Импортировать задачи</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="save_task_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>161</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Сохранить задачи</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="generate_task_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>161</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Сгенерировать задачи</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="len_map_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>390</y>
+        <width>771</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>ТАБЛИЦА РАССТОЯНИЙ</string>
+      </property>
+      <widget class="QTableWidget" name="len_table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>751</width>
+         <height>341</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="statistics_tab">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="title">
+      <string>Статистика</string>
+     </attribute>
+     <widget class="QGroupBox" name="barc_path_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>591</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>РЕЗУЛЬТАТЫ (длина маршрута)</string>
+      </property>
+      <widget class="QWidget" name="barc_path_widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="barc_money_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>10</y>
+        <width>591</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>РЕЗУЛЬТАТЫ (денежные затраты)</string>
+      </property>
+      <widget class="QWidget" name="barc_money_widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>581</width>
+         <height>381</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="results_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>440</y>
+        <width>601</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Данные обо всех вариантах размещения базы</string>
+      </property>
+      <widget class="QTableWidget" name="result_stats_tableview">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>581</width>
+         <height>331</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="results_groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>620</y>
+        <width>471</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Данные о маршруте </string>
+      </property>
+      <widget class="QTableWidget" name="result_path_tableview">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>451</width>
+         <height>151</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="results_groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>471</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Данные о рациональном варианте размещения базы</string>
+      </property>
+      <widget class="QLabel" name="result_base_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>ВЕРТОДРОМ БАЗИРОВАНИЯ:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="result_length_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>ДЛИНА МАРШРУТА, КМ:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="result_lands_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>КОЛ-ВО ПОСЕЩЕНИЙ БАЗЫ:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="result_path_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>ПУТЬ (КОЛ-ВО НП):</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="result_base_textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>20</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="result_length_textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>50</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="result_lands_textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>80</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="result_path_textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="result_cost_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>СТОИМОСТЬ, РУБ:</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="result_cost_textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>140</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="db_tab">
+     <attribute name="title">
+      <string>База Данных</string>
+     </attribute>
+     <widget class="QPushButton" name="button_db_add">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>720</y>
+        <width>321</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Добавить запись</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_db_delete">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>720</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Удалить запись</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="db_groupBox_all">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1191</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>DataBase</string>
+      </property>
+      <widget class="QTableWidget" name="db_table">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>1181</width>
+         <height>631</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="db_comboBox_sel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>401</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Cities</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Helicopters</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="db_message_label">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>720</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Готов к работе</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1249</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
